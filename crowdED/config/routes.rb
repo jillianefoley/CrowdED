@@ -1,4 +1,6 @@
 CrowdED::Application.routes.draw do
+  resources :resources
+
   resources :subjects
 
   get "home/index"
