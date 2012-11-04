@@ -5,7 +5,7 @@
   <%= @subject.name %>
 </p>
 
-<div id="contentlist_Subject" class="contentlist">
+<div id="contentlist_Home" class="contentlist">
 	<ul>
 	<% @resources = @subject.resources %>
 	<% @resources.each do |r| %>
@@ -25,5 +25,4 @@
 	</ul>
 </div>
 
-<%= link_to 'Edit', edit_subject_path(@subject) %> |
-<%= link_to 'Back', subjects_path %>
+

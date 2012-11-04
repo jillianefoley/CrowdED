@@ -1,9 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @subject.name %>
-</p>
+<div id="pagetitle_Home" class="pagetitle">
+	<span class="pagetext"><%= @subject.name %></span>
+</div>
+
+
 
 <div id="contentlist_Home" class="contentlist">
 	<ul>
@@ -25,5 +26,4 @@
 	</ul>
 </div>
 
-<%= link_to 'Edit', edit_subject_path(@subject) %> |
-<%= link_to 'Back', subjects_path %>
+
