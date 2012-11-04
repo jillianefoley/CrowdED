@@ -2,6 +2,7 @@ CrowdED::Application.routes.draw do
   resources :resources do
   	member do
   		post 'upvote'
+  		post 'downvote'
   		end
   	end
 
