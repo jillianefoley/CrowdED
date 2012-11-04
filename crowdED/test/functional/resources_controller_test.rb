@@ -18,7 +18,7 @@ class ResourcesControllerTest < ActionController::TestCase
 
   test "should create resource" do
     assert_difference('Resource.count') do
-      post :create, resource: { description: @resource.description, editDate: @resource.editDate, subject_id: @resource.subject_id, title: @resource.title, url: @resource.url }
+      post :create, resource: { description: @resource.description, recent_date: @resource.recent_date, subject_id: @resource.subject_id, title: @resource.title, url: @resource.url }
     end
 
     assert_redirected_to resource_path(assigns(:resource))
@@ -35,7 +35,7 @@ class ResourcesControllerTest < ActionController::TestCase
   end
 
   test "should update resource" do
-    put :update, id: @resource, resource: { description: @resource.description, editDate: @resource.editDate, subject_id: @resource.subject_id, title: @resource.title, url: @resource.url }
+    put :update, id: @resource, resource: { description: @resource.description, recent_date: @resource.recent_date, subject_id: @resource.subject_id, title: @resource.title, url: @resource.url }
     assert_redirected_to resource_path(assigns(:resource))
   end
 
