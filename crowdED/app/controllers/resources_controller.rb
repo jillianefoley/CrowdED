@@ -1,6 +1,7 @@
 class ResourcesController < ApplicationController
   # GET /resources
   # GET /resources.json
+  
   def index
     @resources = Resource.all
 
@@ -25,8 +26,6 @@ class ResourcesController < ApplicationController
   # GET /resources/new.json
   def new
     @resource = Resource.new
-    
-    
 
     respond_to do |format|
       format.html # new.html.erb
@@ -82,4 +81,15 @@ class ResourcesController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  def upvote
+  	self.increment!(:votes, by = 1)
+  	redirect_to subjects_url
+  end
+  
+  def downvote
+  	self.decrement!(:votes, by = 2)
+   	redirect_to subjects_url
+  end
+  
 end

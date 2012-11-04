@@ -5,6 +5,16 @@
   <%= @subject.name %>
 </p>
 
+<div>
+	<ul>
+	<% @resources = @subject.resources %>
+	<% @resources.each do |r| %>
+		<li><%= link_to r.title, r.url %><br />
+			<%= r.description %> <br />
+			<%= r.votes %> Votes </li>
+	<% end %>
+	</ul>
+</div>
 
 <%= link_to 'Edit', edit_subject_path(@subject) %> |
 <%= link_to 'Back', subjects_path %>
