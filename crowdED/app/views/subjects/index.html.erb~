@@ -7,7 +7,7 @@
 <div id="pagetitle_Home" class="pagetitle">
 	<span class="pagetext">Browse Subjects</span>
 </div>
-<div id="contentlist_Subject" class="contentlist">
+<div class="contentlist">
 	<ul>
 	
 	<% @subjects.each do |subject| %>
