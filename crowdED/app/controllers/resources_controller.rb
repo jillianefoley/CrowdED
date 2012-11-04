@@ -94,7 +94,6 @@ class ResourcesController < ApplicationController
  	  	redirect_to subject_path(@resource.subject_id)
   end
   
-  def imgthumb
-  	@resource = Resource.find(params[:id])
-  	return "http://img.bitpixels.com/getthumbnail?code=12977&url=" + @resource.url
+  def self.imgthumb
+  	return "http://img.bitpixels.com/getthumbnail?code=12977&url=" + self.url
 end
