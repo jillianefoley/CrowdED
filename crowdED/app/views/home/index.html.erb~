@@ -19,8 +19,8 @@
 			<span class="resourcesubject"><%= @subject.name %></span><br />
 			<span class="resourcerank"><%= r.votes %></span>
 			<span class="arrowCont">
-				<%= link_to image_tag("/assets/upArrow.png", :class => "upArrow"), {:controller => "resources", :action => "upvote", :id => r.id}, :method => :post %>
-				<%= link_to image_tag("/assets/downArrow.png", :class => "downArrow"), {:controller => "resources", :action => "downvote", :id => r.id}, :method => :post %>
+				<%= link_to image_tag("/assets/upArrow.png", :class => "upArrow"), :controller => "resources", :action => "upvote", :id => r.id, method: :post %>
+				<%= link_to image_tag("/assets/downArrow.png", :class => "downArrow"), :controller => "resources", :action => "downvote", :id => r.id, method: :post %>
 			</span> 
 			</li>
 		<% end %>

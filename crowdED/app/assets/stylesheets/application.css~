@@ -68,8 +68,8 @@ body {
 .resourceimg {
 	width: 100px;
 	float: left;
-	margin-right: 16px;
-	margin-left: 10px;
+	margin-right: 20px;
+	margin-left: 6px;
 	border: 1px solid #b0aeae;
 }
 .resourcetitle {

@@ -14,7 +14,7 @@
 		<nav id="navCont">
 			<ul>
 				<li><%= link_to "Discover", subjects_path %></li>
-				<li><%= link_to "Home", :controller => "home", :action => "index" %></li>
+				<li><%= link_to "Home", "home/index" %></li>
 				<li><%= link_to "Share", new_resource_path %></li>
 			</ul>
 		</nav>
