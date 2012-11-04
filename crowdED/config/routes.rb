@@ -1,9 +1,14 @@
 CrowdED::Application.routes.draw do
-  resources :resources
+  resources :resources do
+  	member do
+  		post 'upvote'
+  		end
+  	end
 
   resources :subjects
 
   get "home/index"
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

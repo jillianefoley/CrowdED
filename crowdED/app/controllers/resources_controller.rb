@@ -83,13 +83,15 @@ class ResourcesController < ApplicationController
   end
   
   def upvote
-  	self.increment!(:votes, by = 1)
-  	redirect_to subjects_url
+  	@resource = Resource.find(params[:id])
+  	@resource.increment!(:votes, by = 1)
+  	redirect_to subject_path(@resource.subject_id)
   end
   
   def downvote
-  	self.decrement!(:votes, by = 2)
-   	redirect_to subjects_url
+    @resource = Resource.find(params[:id])
+  	@resource.decrement!(:votes, by = 2)
+ 	  	redirect_to subject_path(@resource.subject_id)
   end
   
 end
