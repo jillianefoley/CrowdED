@@ -5,7 +5,7 @@
   <%= @subject.name %>
 </p>
 
-<div id="contentlist_Home" class="contentlist">
+<div id="contentlist_Subject" class="contentlist">
 	<ul>
 	<% @resources = @subject.resources %>
 	<% @resources.each do |r| %>

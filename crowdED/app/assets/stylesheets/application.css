@@ -57,14 +57,23 @@ body {
 	width: 99%;
 	background: #ebeaea;
 	list-style-type: none;
-	-webkit-padding-start: 4px;
+	-webkit-padding-start: 0px;
 }
 
 .contentlist li {
 	height: 77px;
 	padding-top: 14px;
 	padding-bottom: 14px;
+	border-bottom: 1px solid grey;
 }
+
+#contentlist_Subject li {
+	height: 40px;
+	padding-top: 10px;
+	position: relative;
+	border-bottom: 1px solid #285791;
+}
+
 .resourceimg {
 	width: 100px;
 	float: left;

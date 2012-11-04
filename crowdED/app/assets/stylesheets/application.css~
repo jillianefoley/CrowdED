@@ -57,14 +57,23 @@ body {
 	width: 99%;
 	background: #ebeaea;
 	list-style-type: none;
-	-webkit-padding-start: 4px;
+	-webkit-padding-start: 0px;
 }
 
 .contentlist li {
 	height: 77px;
 	padding-top: 14px;
 	padding-bottom: 14px;
+	margin-bottom: 20px;
 }
+
+#contentlist_Subject li {
+	height: 40px;
+	padding-top: 10px;
+	position: relative;
+	border-bottom: 1px solid #285791;
+}
+
 .resourceimg {
 	width: 100px;
 	float: left;
@@ -189,7 +198,7 @@ only screen and (max-device-width : 480px){
 	
 	nav li a {
 		width: 29%;
-		font: 400 12px/1.4 'Open Sans Condensed', sans-serif;
+		font: 400 20px/1.4 'Open Sans Condensed', sans-serif;
 		padding-top: 12px;
 		padding-bottom: 12px;
 	}
