@@ -2,7 +2,10 @@
 <%=link_to "Resources", resources_path %>-->
 
 <div id="search_Home" class="search">
-	<input id="inptSearch_Home" class="inptSearch" placeholder="Search"></input>
+	<%= form_tag resources_path, :method => 'get' do%>
+		<%= text_field_tag :search, params[:search], :id => 'inptSearch_Home', :class => 'inptSearch' %>
+		<%= submit_tag "Search", :name => nil, :class => 'searchsubmit', :placeholder => "Search" %>
+	<% end %>
 </div>
 <div id="pagetitle_Home" class="pagetitle">
 	<span class="pagetext">Fresh Lists</span>
@@ -19,8 +22,8 @@
 			<span class="resourcesubject"><%= @subject.name %></span><br />
 			<span class="resourcerank"><%= r.votes %></span>
 			<span class="arrowCont">
-				<%= link_to image_tag("/assets/upArrow.png", :class => "upArrow"), :controller => "resources", :action => "upvote", :id => r.id, method: :post %>
-				<%= link_to image_tag("/assets/downArrow.png", :class => "downArrow"), :controller => "resources", :action => "downvote", :id => r.id, method: :post %>
+				<%= link_to image_tag("/assets/upArrow.png", :class => "upArrow"), {:controller => "resources", :action => "upvote", :id => r.id}, :method => :post %>
+				<%= link_to image_tag("/assets/downArrow.png", :class => "downArrow"), {:controller => "resources", :action => "downvote", :id => r.id}, :method => :post %>
 			</span> 
 			</li>
 		<% end %>

@@ -1,7 +1,7 @@
 <div id="search_Home" class="search">	
 	<%= form_tag subjects_path, :method => 'get' do%>
-		<%= text_field_tag :search, params[:search], :id => 'inptSearch_Home', :class => 'inptSearch' %>
-		<%= submit_tag "Search", :name => nil %>
+		<%= text_field_tag :search, params[:search], :id => 'inptSearch_Home', :class => 'inptSearch', :placeholder => "Search" %>
+		<%= submit_tag "Search", :name => nil, :class => 'searchsubmit' %>
 	<% end %>
 </div>
 <div id="pagetitle_Home" class="pagetitle">

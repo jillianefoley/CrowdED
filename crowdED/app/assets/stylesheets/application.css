@@ -16,6 +16,7 @@ body {
 	background-image:url('/assets/paper_3_blue.png');
 	background-repeat: repeat;
 	font-family: 'Open Sans Condensed', sans-serif;
+	color: white;
 }
 
 #headerText {
@@ -53,6 +54,10 @@ body {
 	border: none;
 	border-right: solid 3px #ebeaea;
 }
+
+.searchsubmit {
+	display: none;
+}
 .contentlist ul {
 	width: 99%;
 	background: #ebeaea;
@@ -71,7 +76,7 @@ body {
 	height: 40px;
 	padding-top: 10px;
 	position: relative;
-	border-bottom: 1px solid #285791;
+	border-bottom: 1px solid grey;
 }
 
 .resourceimg {
@@ -84,6 +89,12 @@ body {
 .resourcetitle {
 	font-size: 1.3em;
 }
+
+.subjecttitle {
+	font-size: 1.4em;
+	margin-left: 12px;
+}
+
 .resourcerank {
 	float: right;
 	margin-right: 12px;
