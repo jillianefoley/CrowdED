@@ -4,12 +4,12 @@ one:
   title: MyString
   url: MyString
   description: MyText
-  editDate: 2012-11-03
+  recent_date: 2012-11-03
   subject_id: 1
 
 two:
   title: MyString
   url: MyString
   description: MyText
-  editDate: 2012-11-03
+  recent_date: 2012-11-03
   subject_id: 1

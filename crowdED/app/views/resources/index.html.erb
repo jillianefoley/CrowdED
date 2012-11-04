@@ -5,8 +5,9 @@
     <th>Title</th>
     <th>Url</th>
     <th>Description</th>
-    <th>Editdate</th>
+    <th>recent_date</th>
     <th>Subject</th>
+    <th>Votes</th>
     <th></th>
     <th></th>
     <th></th>
@@ -17,8 +18,9 @@
     <td><%= resource.title %></td>
     <td><%= resource.url %></td>
     <td><%= resource.description %></td>
-    <td><%= resource.editDate %></td>
+    <td><%= resource.recent_date %></td>
     <td><%= resource.subject_id %></td>
+    <td><%= resource.votes %></td>
     <td><%= link_to 'Show', resource %></td>
     <td><%= link_to 'Edit', edit_resource_path(resource) %></td>
     <td><%= link_to 'Destroy', resource, method: :delete, data: { confirm: 'Are you sure?' } %></td>
