@@ -1,0 +1,20 @@
+function _detectWindowSize () {
+	var w = window.innerWidth;
+	var nav = $('#navCont');
+	var start = $(nav).offset().top;
+	if (jQuery.browser.mobile) {	
+		$.event.add(window, "scroll", function() {
+			var p = $(window).scrollTop();
+			var nv = $(nav);
+			nv.css('position',((p)>start) ? 'fixed' : 'static');
+			nv.css('top', ((p)>start) ? '-30px' : '');
+			
+		});
+	}
+}  
+ $(document).ready(function() {
+	$(window).bind('orientationchange', _detectWindowSize);
+	window.onload=_detectWindowSize;
+	window.onresize=_detectWindowSize;
+	_detectWindowSize();
+}
