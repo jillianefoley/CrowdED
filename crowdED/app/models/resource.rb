@@ -6,6 +6,8 @@ class Resource < ActiveRecord::Base
   validates :url, :presence => true
   validates :title, :presence => true
   validates :subject_id, :presence => true
+  default_scope order('created_at ASC')
+
 
   def self.search(search)
   	if search
