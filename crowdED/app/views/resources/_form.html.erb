@@ -24,12 +24,8 @@
     <%= f.text_area :description %>
   </div>
   <div class="field">
-    <%= f.label :recent_date %><br />
-    <%= f.date_select :recent_date %>
-  </div>
-  <div class="field">
     <%= f.label :subject_id %><br />
-    <%= f.number_field :subject_id %>
+    <%= collection_select(:resource, :subject_id, Subject.all, :id, :name)%>
   </div>
   <div class="actions">
     <%= f.submit %>
