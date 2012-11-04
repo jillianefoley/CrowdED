@@ -2,7 +2,10 @@
 <%=link_to "Resources", resources_path %>-->
 
 <div id="search_Home" class="search">
-	<input id="inptSearch_Home" class="inptSearch" placeholder="Search"></input>
+	<%= form_tag resources_path, :method => 'get' do%>
+		<%= text_field_tag :search, params[:search], :id => 'inptSearch_Home', :class => 'inptSearch' %>
+		<%= submit_tag "Search", :name => nil %>
+	<% end %>
 </div>
 <div id="pagetitle_Home" class="pagetitle">
 	<span class="pagetext">Fresh Lists</span>

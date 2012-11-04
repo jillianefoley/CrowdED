@@ -3,7 +3,7 @@ class ResourcesController < ApplicationController
   # GET /resources.json
   
   def index
-    @resources = Resource.all
+    @resources = Resource.search(params[:search])
 
     respond_to do |format|
       format.html # index.html.erb
