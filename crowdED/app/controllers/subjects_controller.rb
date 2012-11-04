@@ -2,7 +2,7 @@ class SubjectsController < ApplicationController
   # GET /subjects
   # GET /subjects.json
   def index
-    @subjects = Subject.all
+  	@subjects = Subject.search(params[:search])
 
     respond_to do |format|
       format.html # index.html.erb
@@ -80,4 +80,5 @@ class SubjectsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
 end

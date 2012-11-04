@@ -85,15 +85,13 @@ class ResourcesController < ApplicationController
   def upvote
   	@resource = Resource.find(params[:id])
   	@resource.increment!(:votes, by = 1)
-  		session[:return_to] ||= request.referer
- 	  	redirect_to session[:return_to] 
+ 	  	redirect_to(:back)
   end
   
   def downvote
     @resource = Resource.find(params[:id])
   	@resource.decrement!(:votes, by = 1)
-  		session[:return_to] ||= request.referer
- 	  	redirect_to session[:return_to] 
+ 	  	redirect_to(:back)
   end
   
 end

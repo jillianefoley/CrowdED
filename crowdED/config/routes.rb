@@ -6,7 +6,11 @@ CrowdED::Application.routes.draw do
   		end
   	end
 
-  resources :subjects
+  resources :subjects do
+  	collection do
+  		get 'search'
+  	end
+  end
 
   get "home/index"
   
