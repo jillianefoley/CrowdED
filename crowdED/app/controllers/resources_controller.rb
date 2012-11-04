@@ -85,15 +85,15 @@ class ResourcesController < ApplicationController
   def upvote
   	@resource = Resource.find(params[:id])
   	@resource.increment!(:votes, by = 1)
-  		redirect_to subject_path(@resource.subject_id)
+  		session[:return_to] ||= request.referer
+ 	  	redirect_to session[:return_to] 
   end
   
   def downvote
     @resource = Resource.find(params[:id])
   	@resource.decrement!(:votes, by = 1)
- 	  	redirect_to subject_path(@resource.subject_id)
+  		session[:return_to] ||= request.referer
+ 	  	redirect_to session[:return_to] 
   end
   
-  def self.imgthumb
-  	return "http://img.bitpixels.com/getthumbnail?code=12977&url=" + self.url
 end

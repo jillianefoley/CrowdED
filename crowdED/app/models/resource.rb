@@ -6,6 +6,7 @@ class Resource < ActiveRecord::Base
   validates :url, :presence => true
   validates :title, :presence => true
   validates :subject_id, :presence => true
+
   
   private
     def default_values
