@@ -28,6 +28,6 @@
     <%= collection_select(:resource, :subject_id, Subject.all, :id, :name)%>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit, :class => "submit" %>
   </div>
 <% end %>

@@ -15,11 +15,11 @@
 body {
 	background-image:url('/assets/paper_3_blue.png');
 	background-repeat: repeat;
-	font-family: 'Numans', sans-serif;
+	font-family: 'Open Sans Condensed', sans-serif;
 }
 
 #headerText {
-	font-size: 32px;
+	font-size: 50px;
 	width: 100%;
 }
 
@@ -68,8 +68,8 @@ body {
 .resourceimg {
 	width: 100px;
 	float: left;
-	margin-right: 20px;
-	margin-left: 6px;
+	margin-right: 16px;
+	margin-left: 10px;
 	border: 1px solid #b0aeae;
 }
 .resourcetitle {
@@ -105,6 +105,34 @@ input:-moz-placeholder {
 	font-size: 1.15em;
 }
 
+.field {
+	color: white;
+	border: none;
+}
+
+.new_description {
+	border: none;
+	height: 50px;
+}
+
+.new_field {
+	border: none;
+	height: 20px;
+}
+
+.back {
+	color: white;
+	
+}
+
+.submit {
+	height: 22px;
+}
+
+.back a:hover {
+	color: white;
+}
+
 nav {
 	width: 100%;
 	margin: 30px auto;
@@ -128,7 +156,7 @@ nav li a {
 	border-right: 1px solid #285791;
  
 	color: #504e4e;	
-	font: 400 13px/1.4 'Open Sans Condensed', sans-serif;
+	font: 400 18px/1.4 'Open Sans Condensed', sans-serif;
 	text-align: center;
 	text-decoration: none;
 	text-transform: uppercase;
