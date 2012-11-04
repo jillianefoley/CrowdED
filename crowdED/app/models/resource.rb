@@ -7,6 +7,13 @@ class Resource < ActiveRecord::Base
   validates :title, :presence => true
   validates :subject_id, :presence => true
 
+  def self.search(search)
+  	if search
+  		find(:all, :conditions => ['title LIKE ? OR description LIKE ?', "%#{search}%", "%#{search}%"])
+  	else
+  		find(:all)	
+  	end
+  end
   
   private
     def default_values
